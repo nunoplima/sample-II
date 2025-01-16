@@ -1,4 +1,4 @@
-import { IMarket } from "@/app/types";
+import { IMarket } from "@/types";
 
 interface IMarkets {
   markets: IMarket[];

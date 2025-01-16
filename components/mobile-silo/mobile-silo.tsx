@@ -1,6 +1,6 @@
 import circleIcon from "@/assets/circle.svg";
 import questionIcon from "@/assets/question.svg";
-import { ORACLES_MAP } from "@/constants/const";
+import { ORACLES_MAP } from "@/constants";
 import { toPercentage, toUSD } from "@/lib/utils";
 import { ISilo } from "@/types";
 import Image from "next/image";
