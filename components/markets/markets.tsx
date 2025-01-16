@@ -46,6 +46,10 @@ export const Markets: FC = () => {
       (Number(b.silo0.tvl) + Number(b.silo1.tvl)) * debouncedSortDirection
   );
 
+  if (filteredAndSortedMarkets.length === 0) {
+    return <p className="text-sm">Oops, no markets matching your search...</p>;
+  }
+
   return (
     <>
       {/* desktop */}
