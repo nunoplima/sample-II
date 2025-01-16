@@ -1,0 +1,8 @@
+ <svg
+    class="text-concept-accent-a h-2.5 w-2.5"
+    fill="#f4d65f"
+    viewBox="0 0 10 10"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle cx="5" cy="5" fill="#f4d65f" r="5"></circle>
+  </svg>

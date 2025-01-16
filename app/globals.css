@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: rgb(226, 222, 222);
+  --foreground: rgb(188, 188, 188);
+  --secondary-foreground: rgb(48, 49, 54);
+  --typography: rgb(0, 0, 0);
+  --seconday-typography: rgb(68, 69, 76);
+  --font-dm-sans: DM Sans, Arial, Helvetica, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: rgb(14, 15, 15);
+    --foreground: rgb(33, 34, 38);
+    --secondary-foreground: rgb(48, 49, 54);
+    --typography: rgb(255, 255, 255);
+    --seconday-typography: rgb(143, 146, 157);
+  }
+}
+
+body {
+  color: var(--typography);
+  background: var(--background);
+  font-family: var(--font-dm-sans);
+}
