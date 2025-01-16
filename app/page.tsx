@@ -13,12 +13,12 @@ export default async function Home() {
   });
 
   return (
-    <div className="py-5 px-2.5 sm:px-5 mx-auto max-w-screen-xl">
+    <>
       <Controls />
 
       <HydrationBoundary state={dehydrate(queryClient)}>
         <Markets />
       </HydrationBoundary>
-    </div>
+    </>
   );
 }

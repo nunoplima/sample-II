@@ -1,4 +1,5 @@
 import Providers from "@/components/providers";
+import Main from "@/components/ui/main";
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import { PropsWithChildren } from "react";
@@ -18,7 +19,9 @@ export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
       <body className={`${dmSans.variable} antialiased`}>
-        <Providers>{children}</Providers>
+        <Main>
+          <Providers>{children}</Providers>
+        </Main>
       </body>
     </html>
   );
