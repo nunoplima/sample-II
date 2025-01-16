@@ -22,10 +22,10 @@ export const Controls = () => {
     direction: searchParams.get(EQueryParamsKey.sortDirection) || "",
   };
 
-  const handleSearchTermChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleSearchTermChange = (newSearchTerm: string) => {
     const updatedSearchParams = getUpdatedSearchParams({
       key: EQueryParamsKey.market,
-      value: e.target.value,
+      value: newSearchTerm,
     });
     router.push(updatedSearchParams);
   };
@@ -38,7 +38,7 @@ export const Controls = () => {
     router.push(updatedSearchParams);
   };
 
-  const handlebyTvl = () => {
+  const handleSortbyTvl = () => {
     const currentDirection =
       searchParams.get(EQueryParamsKey.sortDirection) || ESortDirection.default;
     const newSortDirection =
@@ -87,7 +87,7 @@ export const Controls = () => {
         onChange={handleIsVerifiedChange}
       />
 
-      <Button onClick={handlebyTvl}>
+      <Button onClick={handleSortbyTvl}>
         Sort by TVL
         <Image
           src={

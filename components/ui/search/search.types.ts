@@ -1,8 +1,6 @@
-import { ChangeEvent } from "react";
-
 interface ISearch {
   value: string;
-  handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  handleChange: (term: string) => void;
 }
 
 export type { ISearch };
