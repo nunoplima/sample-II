@@ -124,7 +124,8 @@ export const MobileSilo = ({
             <>
               <Image
                 src={circleIcon}
-                style={{ height: 10, width: 10 }}
+                width={10}
+                height={10}
                 alt="circle logo"
               />
               {ORACLES_MAP[oracle.oracleKey]}

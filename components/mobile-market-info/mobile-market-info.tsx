@@ -16,11 +16,7 @@ export const MobileMarketInfo: FC<IMobileMarketInfo> = ({
     <div className="flex gap-2.5 sm:gap-5 rounded-xl bg-foreground p-5">
       <div className="flex gap-2 text-secondary-typography">
         Network
-        <Image
-          src={arbitrumIcon}
-          style={{ height: 18, width: 18 }}
-          alt="arbitrum logo"
-        />
+        <Image src={arbitrumIcon} height={18} width={18} alt="arbitrum logo" />
       </div>
 
       <div className="flex gap-2">

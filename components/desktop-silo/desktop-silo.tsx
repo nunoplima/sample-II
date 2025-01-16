@@ -69,17 +69,13 @@ export const DesktopSilo = ({
     <div role="cell" className="flex-[5] flex items-center gap-2.5">
       {ORACLES_MAP[oracle.oracleKey] ? (
         <div className="flex gap-2.5 items-center">
-          <Image
-            src={circleIcon}
-            style={{ height: 10, width: 10 }}
-            alt="circle logo"
-          />
+          <Image src={circleIcon} height={10} width={10} alt="circle logo" />
           {ORACLES_MAP[oracle.oracleKey]}
         </div>
       ) : (
         "--"
       )}
-      <Image src={questionIcon} width={18} height={18} alt="question logo" />
+      <Image src={questionIcon} height={18} width={18} alt="question logo" />
     </div>
   </>
 );

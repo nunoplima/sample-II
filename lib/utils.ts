@@ -39,3 +39,31 @@ export const toPercentage = ({
   const percentage = (Number(value) / Math.pow(10, decimals)) * 100;
   return `${percentage.toFixed(toFixed)}%`;
 };
+
+export const getUpdatedSearchParams = (
+  updates:
+    | { key: string; value: string | boolean }
+    | Array<{ key: string; value: string | boolean }>
+): string => {
+  const searchParams = new URLSearchParams(window.location.search);
+
+  if (Array.isArray(updates)) {
+    updates.forEach(({ key, value }) => {
+      if (!value) {
+        searchParams.delete(key);
+      } else {
+        searchParams.set(key, value as string);
+      }
+    });
+  } else {
+    const { key, value } = updates;
+
+    if (!value) {
+      searchParams.delete(key);
+    } else {
+      searchParams.set(key, value as string);
+    }
+  }
+
+  return `?${searchParams.toString()}`;
+};
